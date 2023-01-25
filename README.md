@@ -1,7 +1,3 @@
-# colombia_similarity
-These supplementary materials present the replication of files of the article "Are Many Sets of Eyes Better Than One?".
-
-
 ---------------------------------------
 README
 ---------------------------------------
@@ -30,6 +26,7 @@ The replication materials run in a computational environment with the following 
 * R version: 4.1.0 (or later)
 * Operating System: Windows 10 x64 (also runs in camOS or Ubuntu)
 * Platform: 64-bit
+* Cores: 10
 
 
 The script requires the following packages:
@@ -85,8 +82,8 @@ The replications materialas include the following folders:
 
 # HOW TO RUN THE PROJECT
 
-1. Open the osorio_similarity_rep.Rproj R project file.
-2. Go to scripts folder and run the script similarity_fv.R
+1. Open the `osorio_similarity_rep.Rproj` R project file.
+2. Go to `scripts` folder and run the `script similarity_fv.R` script.
 3. The scrip is structured according to the following sections and should be executed progressively:
 
 * `0. SETUP`
