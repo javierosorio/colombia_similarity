@@ -89,11 +89,11 @@ The replications materialas include the following folders:
 2. Go to scripts folder and run the script similarity_fv.R
 3. The scrip is structured according to the following sections and should be executed progressively:
 
-* `0. SETUP`
-* `1. SPIDER WEB PLOT`
-* `2. GET THE DATA`
-* `3. ASSESS COVERAGE`
-* `4. EXPLORE MISSIGNESS` 
+  * `0. SETUP`
+  * `1. SPIDER WEB PLOT`
+  * `2. GET THE DATA`
+  * `3. ASSESS COVERAGE`
+  * `4. EXPLORE MISSIGNESS` 
 * `5. EXPLORE JACARD AND SORENSEN`
 * `6. JACCARD INDIEX OVER YEARS FOR GUERRILLA AND PARAMILITARIES`
 * `7. VISUALIZE JACCARD OVER YEARS FOR GUERRILLA AND PARAMILITARIES`
