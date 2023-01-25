@@ -29,6 +29,42 @@ The replication materials run in a computational environment with the following 
 * Cores: 10
 
 
+<br>
+
+# FOLDER STRUCTURE
+
+The replications materialas include the following folders:
+* `data_final` 
+* `graphs`
+* `scripts`
+* `tables`
+
+<br>
+
+# HOW TO RUN THE PROJECT
+
+1. Open the `osorio_similarity_rep.Rproj` R project file.
+2. Go to `scripts` folder and run the `script similarity_fv.R` script.
+3. The scrip is structured according to the following sections and should be executed progressively:
+
+* `0. SETUP`
+* `1. SPIDER WEB PLOT`
+* `2. GET THE DATA`
+* `3. ASSESS COVERAGE`
+* `4. EXPLORE MISSIGNESS` 
+* `5. EXPLORE JACARD AND SORENSEN`
+* `6. JACCARD INDIEX OVER YEARS FOR GUERRILLA AND PARAMILITARIES`
+* `7. VISUALIZE JACCARD OVER YEARS FOR GUERRILLA AND PARAMILITARIES`
+* `8. AVERAGE JACCARD SIMILARITY GUERRILLA AND PARAMILITARIES` 
+* `10. LOCAL JACCARD SIMILARITY PER ARMED GROUP` 
+* `11. AVERAGE JACCARD SIMILARITY PER ARMED GROUP OVER TIME`
+* `12. STATISTICAL ANALYSIS OF HOMICIDES` 
+* `13. REPLICATE DUBE AND VARGAS WITH DIFFERENT MEASURES` 
+* `14. JACCARD FOR EACH PAIR OF MEASUREMENT SETS`
+
+<br>
+
+
 The script requires the following packages:
 * `assertthat_0.2.1`
 * `base` 
@@ -67,39 +103,6 @@ The script requires the following packages:
 * `utf8_1.2.1` 
 * `utils` 
 * `vctrs_0.3.8` 
-
-<br>
-
-# FOLDER STRUCTURE
-
-The replications materialas include the following folders:
-* `data_final` 
-* `graphs`
-* `scripts`
-* `tables`
-
-<br>
-
-# HOW TO RUN THE PROJECT
-
-1. Open the `osorio_similarity_rep.Rproj` R project file.
-2. Go to `scripts` folder and run the `script similarity_fv.R` script.
-3. The scrip is structured according to the following sections and should be executed progressively:
-
-* `0. SETUP`
-* `1. SPIDER WEB PLOT`
-* `2. GET THE DATA`
-* `3. ASSESS COVERAGE`
-* `4. EXPLORE MISSIGNESS` 
-* `5. EXPLORE JACARD AND SORENSEN`
-* `6. JACCARD INDIEX OVER YEARS FOR GUERRILLA AND PARAMILITARIES`
-* `7. VISUALIZE JACCARD OVER YEARS FOR GUERRILLA AND PARAMILITARIES`
-* `8. AVERAGE JACCARD SIMILARITY GUERRILLA AND PARAMILITARIES` 
-* `10. LOCAL JACCARD SIMILARITY PER ARMED GROUP` 
-* `11. AVERAGE JACCARD SIMILARITY PER ARMED GROUP OVER TIME`
-* `12. STATISTICAL ANALYSIS OF HOMICIDES` 
-* `13. REPLICATE DUBE AND VARGAS WITH DIFFERENT MEASURES` 
-* `14. JACCARD FOR EACH PAIR OF MEASUREMENT SETS`
 
 <br>
 
