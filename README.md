@@ -36,6 +36,14 @@ The replication materials run in a computational environment with the following 
 The replications materialas include the following folders:
 * `data_final` 
 * `graphs`
+   * `coeffplots`
+   * `coverage`
+   * `jaccard_average`
+   * `jaccard_local`
+   * `jaccard_time`
+   * `missing`
+   * `pairs`
+   * `spider`
 * `scripts`
 * `tables`
 
