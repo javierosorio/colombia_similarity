@@ -6847,12 +6847,6 @@ summary(DV.Porig)
 }
 
 
-
-
-
-
-
-
 # 14. JACCARD FOR EACH PAIR OF MEASUREMENT SETS  ############################################################
 
 
@@ -7289,19 +7283,19 @@ matrix.pair.g$ord.y <- factor(matrix.pair.g$y, ordered=TRUE, levels = c("CL", "R
 
 pairf1.g2 <- ggplot(matrix.pair.g, aes(x=ord.x, y=ord.y, fill = value)) +
   geom_tile() + 
-  scale_fill_gradient(low = "cyan1", high = "navyblue", na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) + 
+  scale_fill_gradientn(colours = magma(10),na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) +
   xlab("") + ylab("") +
   guides(fill=guide_legend(title="Jaccard")) + 
   coord_flip() +
-  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), colour = "black", check_overlap = TRUE) +
+  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), color=ifelse(matrix.pair.g$value<1,"white","black"), check_overlap = TRUE) +
   geom_rect(aes(xmin = 3.5, xmax = 6.5, ymin = 3.5, ymax = 6.5),
-            fill = NA, color = "black",linetype = "solid", size=1.5) + 
+            fill = NA, color = "red",linetype = "solid", size=1.5) + 
   geom_rect(aes(xmin = 0.5, xmax = 3.5, ymin = 0.5, ymax = 3.5),
-            fill = NA, color = "black",linetype = "dashed", size=1.5) 
+            fill = NA, color = "red",linetype = "dashed", size=1.5) 
 pairf1.g2
 
 # Save graph
-pdf("./graphs/coeffplot/pair_jaccard_g2.pdf", width=4, height=3.5)
+pdf("./graphs/pairs/pair_jaccard_g2.pdf", width=4, height=3.5)
 pairf1.g2
 dev.off()
 
@@ -7354,21 +7348,23 @@ matrix.pair.p$ord.y <- factor(matrix.pair.p$y, ordered=TRUE, levels = c("CL", "R
 
 pairf1.p2 <- ggplot(matrix.pair.p, aes(x=ord.x, y=ord.y, fill = value)) +
   geom_tile() + 
-  scale_fill_gradient(low = "cyan1", high = "navyblue", na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) + 
+  #scale_fill_gradient(low = "cyan1", high = "navyblue", na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) + 
+  scale_fill_gradientn(colours = magma(10),na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) +
   xlab("") + ylab("") +
   guides(fill=guide_legend(title="Jaccard")) + 
   coord_flip() +
-  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), colour = "black", check_overlap = TRUE)  +
+  #geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), colour = "black", check_overlap = TRUE)  +
+  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), color=ifelse(matrix.pair.p$value<1,"white","black"), check_overlap = TRUE) +
   geom_rect(aes(xmin = 3.5, xmax = 6.5, ymin = 3.5, ymax = 6.5),
-            fill = NA, color = "black",linetype = "solid", size=1.5) + 
+            fill = NA, color = "red",linetype = "solid", size=1.5) + 
   geom_rect(aes(xmin = 0.5, xmax = 3.5, ymin = 0.5, ymax = 3.5),
-            fill = NA, color = "black",linetype = "dashed", size=1.5)
+            fill = NA, color = "red",linetype = "dashed", size=1.5)
 
 pairf1.p2
 
 
 # Save graph
-pdf("./graphs/coeffplot/pair_jaccard_p2.pdf", width=4, height=3.5)
+pdf("./graphs/pairs/pair_jaccard_p2.pdf", width=4, height=3.5)
 pairf1.p2
 dev.off()
 
@@ -7420,20 +7416,20 @@ matrix.pair.f$ord.y <- factor(matrix.pair.f$y, ordered=TRUE, levels = c("RC", "V
 
 pairf1.f2 <- ggplot(matrix.pair.f, aes(x=ord.x, y=ord.y, fill = value)) +
   geom_tile() + 
-  scale_fill_gradient(low = "cyan1", high = "navyblue", na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) + 
+  scale_fill_gradientn(colours = magma(10),na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) +
   xlab("") + ylab("") +
   guides(fill=guide_legend(title="Jaccard")) + 
   coord_flip() +
-  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), colour = "black", check_overlap = TRUE) +
+  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), color=ifelse(matrix.pair.f$value<1,"white","black"), check_overlap = TRUE) +
   geom_rect(aes(xmin = 2.5, xmax = 5.5, ymin = 2.5, ymax = 5.5),
-            fill = NA, color = "black",linetype = "solid", size=1.5) + 
+            fill = NA, color = "red",linetype = "solid", size=1.5) + 
   geom_rect(aes(xmin = 0.5, xmax = 2.5, ymin = 0.5, ymax = 2.5),
-            fill = NA, color = "black",linetype = "dashed", size=1.5) 
+            fill = NA, color = "red",linetype = "dashed", size=1.5) 
 
 pairf1.f2
 
 # Save graph
-pdf("./graphs/coeffplot/pair_jaccard_f2.pdf", width=4, height=3.5)
+pdf("./graphs/pairs/pair_jaccard_f2.pdf", width=4, height=3.5)
 pairf1.f2
 dev.off()
 
@@ -7484,20 +7480,20 @@ matrix.pair.e$ord.y <- factor(matrix.pair.e$y, ordered=TRUE, levels = c("RC", "V
 
 pairf1.e2 <- ggplot(matrix.pair.e, aes(x=ord.x, y=ord.y, fill = value)) +
   geom_tile() + 
-  scale_fill_gradient(low = "cyan1", high = "navyblue", na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) + 
+  scale_fill_gradientn(colours = magma(10),na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) +
   xlab("") + ylab("") +
   guides(fill=guide_legend(title="Jaccard")) + 
   coord_flip() +
-  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), colour = "black", check_overlap = TRUE)  +
+  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), color=ifelse(matrix.pair.e$value<1,"white","black"), check_overlap = TRUE) +
   geom_rect(aes(xmin = 2.5, xmax = 4.5, ymin = 2.5, ymax = 4.5),
-            fill = NA, color = "black",linetype = "solid", size=1.5) + 
+            fill = NA, color = "red",linetype = "solid", size=1.5) + 
   geom_rect(aes(xmin = 0.5, xmax = 2.5, ymin = 0.5, ymax = 2.5),
-            fill = NA, color = "black",linetype = "dashed", size=1.5)
+            fill = NA, color = "red",linetype = "dashed", size=1.5)
 
 pairf1.e2
 
 # Save graph
-pdf("./graphs/coeffplot/pair_jaccard_e2.pdf", width=4, height=3.5)
+pdf("./graphs/pairs/pair_jaccard_e2.pdf", width=4, height=3.5)
 pairf1.e2
 dev.off()
 
@@ -7549,22 +7545,31 @@ matrix.pair.a$ord.y <- factor(matrix.pair.a$y, ordered=TRUE, levels = c("RC", "V
 
 pairf1.a2 <- ggplot(matrix.pair.a, aes(x=ord.x, y=ord.y, fill = value)) +
   geom_tile() + 
-  scale_fill_gradient(low = "cyan1", high = "navyblue", na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) + 
+  scale_fill_gradientn(colours = magma(10),na.value = NA, limits=c(0,1),breaks=c(0,.2,.4,.6,.8,1)) +
   xlab("") + ylab("") +
   guides(fill=guide_legend(title="Jaccard")) + 
   coord_flip() +
-  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), colour = "black", check_overlap = TRUE)  +
+  geom_text(aes(ord.x, ord.y, label=round(value, digits = 2)), color=ifelse(matrix.pair.a$value<1,"white","black"), check_overlap = TRUE) +
   geom_rect(aes(xmin = 2.5, xmax = 5.5, ymin = 2.5, ymax = 5.5),
-            fill = NA, color = "black",linetype = "solid", size=1.5) + 
+            fill = NA, color = "red",linetype = "solid", size=1.5) + 
   geom_rect(aes(xmin = 0.5, xmax = 2.5, ymin = 0.5, ymax = 2.5),
-            fill = NA, color = "black",linetype = "dashed", size=1.5) 
+            fill = NA, color = "red",linetype = "dashed", size=1.5) 
 
 pairf1.a2
 
 # Save graph
-pdf("./graphs/coeffplot/pair_jaccard_a2.pdf", width=4, height=3.5)
+pdf("./graphs/pairs/pair_jaccard_a2.pdf", width=4, height=3.5)
 pairf1.a2
 dev.off()
+
+
+
+
+
+
+
+
+
 
 
 
